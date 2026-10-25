@@ -1,0 +1,75 @@
+name: Update Daily E-Ink BMP & Deploy GitHub Pages PWA
+
+on:
+  schedule:
+    # 23:00 UTC = 06:00 AM Bangkok Time (GMT+7) everyday
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages-and-eink"
+  cancel-in-progress: false
+
+jobs:
+  build-eink-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Pillow for E-Ink BMP Generation
+        run: |
+          pip install Pillow
+
+      - name: Generate E-Ink Display Images (today.bmp, today_bw.bmp, today.png)
+        run: |
+          python generate_eink.py --out-dir . --fonts-dir fonts --state-file clinic_state.json
+
+      - name: Commit updated today.bmp & today.png to repository for raw HTTP fetch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add today.bmp today_bw.bmp today.png
+          git diff --staged --quiet || git commit -m "Auto-update E-Ink BMP images [skip ci]"
+          git push || true
+
+      - name: Assemble GitHub Pages Web & PWA Distribution
+        run: |
+          mkdir -p dist
+          cp index.html dist/
+          cp RjVaxClinic_appointment_dashboard.html dist/
+          cp manifest.json dist/
+          cp sw.js dist/
+          cp icon-192.png dist/
+          cp icon-512.png dist/
+          cp clinic_state.json dist/
+          cp today.bmp dist/
+          cp today_bw.bmp dist/
+          cp today.png dist/
+          if [ -f thai_public_holidays_database.json ]; then cp thai_public_holidays_database.json dist/; fi
+          cp -r fonts dist/
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
