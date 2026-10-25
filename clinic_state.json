@@ -24,6 +24,22 @@
         "perm_sync_cabinet": true,
         "perm_manage_users": true
       }
+    },
+    {
+      "username": "rtnlp",
+      "name": "พว.ธนชาติ",
+      "role": "admin",
+      "roleName": "ผู้ดูแลระบบ (Admin)",
+      "totpSecret": "LFPQHKMOEVX7MXKG",
+      "hash": "cfc8b11557996fdfba449173dfc9287839544328ece9787327908b3b16a241e3",
+      "permissions": {
+        "perm_calc_export": true,
+        "perm_adhoc_open": true,
+        "perm_manage_holidays": true,
+        "perm_delete_holidays": true,
+        "perm_sync_cabinet": true,
+        "perm_manage_users": true
+      }
     }
   ],
   "passwordResetRequests": []
