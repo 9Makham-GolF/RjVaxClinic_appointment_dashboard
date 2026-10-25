@@ -1,0 +1,26 @@
+{
+  "name": "ระบบคำนวณและเกลี่ยวันนัดหมายอัตโนมัติ คลินิกวัคซีนผู้ใหญ่ครบวงจร รพ.ราชวิถี",
+  "short_name": "RJ.VaxClinic",
+  "description": "ระบบคำนวณและเกลี่ยวันนัดหมายอัตโนมัติ คลินิกวัคซีนผู้ใหญ่ครบวงจร โรงพยาบาลราชวิถี พร้อมเชื่อมต่อจอ E-Ink",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#FFF9FB",
+  "theme_color": "#DB2777",
+  "lang": "th",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
