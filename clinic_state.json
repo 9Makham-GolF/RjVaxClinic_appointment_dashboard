@@ -8,5 +8,23 @@
   "modifiedHolidays": [],
   "deletedHolidays": [],
   "holidayLogs": [],
+  "usersDb": [
+    {
+      "username": "admin",
+      "name": "ผู้ดูแลระบบสูงสุด (Master Admin)",
+      "role": "admin",
+      "roleName": "ผู้ดูแลระบบสูงสุด (Master Administrator)",
+      "totpSecret": "RJVAXADMINSEC234",
+      "hash": "ab7ac7538d39134ea0e5ad4456fb1475223ce29d3968a1d876ca6f2a843b3dfc",
+      "permissions": {
+        "perm_calc_export": true,
+        "perm_adhoc_open": true,
+        "perm_manage_holidays": true,
+        "perm_delete_holidays": true,
+        "perm_sync_cabinet": true,
+        "perm_manage_users": true
+      }
+    }
+  ],
   "passwordResetRequests": []
 }
