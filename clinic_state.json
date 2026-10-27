@@ -1,6 +1,6 @@
 {
   "version": "2.5.0",
-  "updatedAt": "2026-10-19T00:00:00.000Z",
+  "updatedAt": "2026-10-27T05:47:47.907Z",
   "clinic": "คลินิกวัคซีนผู้ใหญ่ครบวงจร รพ.ราชวิถี",
   "balanceMode": "max_2",
   "adhocOpenDates": [],
@@ -32,6 +32,22 @@
       "roleName": "ผู้ดูแลระบบ (Admin)",
       "totpSecret": "LFPQHKMOEVX7MXKG",
       "hash": "cfc8b11557996fdfba449173dfc9287839544328ece9787327908b3b16a241e3",
+      "permissions": {
+        "perm_calc_export": true,
+        "perm_adhoc_open": true,
+        "perm_manage_holidays": true,
+        "perm_delete_holidays": true,
+        "perm_sync_cabinet": true,
+        "perm_manage_users": true
+      }
+    },
+    {
+      "username": "rtwsr",
+      "name": "พว.ธัญวรัตม์",
+      "role": "admin",
+      "roleName": "หัวหน้าคลินิก",
+      "totpSecret": "BKHDWMW3IWL23EW3",
+      "hash": "44b1d012614a42db359fe4f2fcc23dce47bc0c2198933cd6cfd2b97a05824128",
       "permissions": {
         "perm_calc_export": true,
         "perm_adhoc_open": true,
