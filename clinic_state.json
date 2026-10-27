@@ -1,13 +1,26 @@
 {
   "version": "2.5.0",
-  "updatedAt": "2026-10-27T05:49:01.154Z",
+  "updatedAt": "2026-10-27T08:31:40.823Z",
   "clinic": "คลินิกวัคซีนผู้ใหญ่ครบวงจร รพ.ราชวิถี",
   "balanceMode": "max_2",
-  "adhocOpenDates": [],
+  "adhocOpenDates": [
+    "2026-10-31"
+  ],
   "customAddedHolidays": [],
   "modifiedHolidays": [],
   "deletedHolidays": [],
-  "holidayLogs": [],
+  "holidayLogs": [
+    {
+      "id": "log_1793089900821_sxwg",
+      "action": "add",
+      "date": "2026-10-31",
+      "name": "วันหยุด",
+      "details": "เปิดทำการเฉพาะกิจในวันหยุด \"วันหยุด\" (31 ต.ค. 69)",
+      "timestamp": "2026-10-27T08:31:40.821Z",
+      "displayTime": "27 ต.ค. 69 15:31:40 น.",
+      "backupData": null
+    }
+  ],
   "usersDb": [
     {
       "username": "admin",
