@@ -1,6 +1,6 @@
 {
   "version": "2.5.0",
-  "updatedAt": "2026-10-27T05:47:47.907Z",
+  "updatedAt": "2026-10-27T05:49:01.154Z",
   "clinic": "คลินิกวัคซีนผู้ใหญ่ครบวงจร รพ.ราชวิถี",
   "balanceMode": "max_2",
   "adhocOpenDates": [],
@@ -55,6 +55,22 @@
         "perm_delete_holidays": true,
         "perm_sync_cabinet": true,
         "perm_manage_users": true
+      }
+    },
+    {
+      "username": "station",
+      "name": "เคาน์เตอร์",
+      "role": "custom",
+      "roleName": "ระดับสิทธิ์กำหนดเอง (Custom)",
+      "totpSecret": "AB5GDXZE5NMM6GOU",
+      "hash": "f970159de97338d5e63f07f08bdd1b955f954d4cb097e950ff23f35f3b7f1f98",
+      "permissions": {
+        "perm_calc_export": true,
+        "perm_adhoc_open": true,
+        "perm_manage_holidays": true,
+        "perm_delete_holidays": true,
+        "perm_sync_cabinet": true,
+        "perm_manage_users": false
       }
     }
   ],
